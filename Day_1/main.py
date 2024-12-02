@@ -1,4 +1,4 @@
-def day1(filename='input.txt'):
+def part1(filename='input.txt'):
     left_list = [] 
     right_list = [] 
     total_distance = 0
@@ -16,9 +16,9 @@ def day1(filename='input.txt'):
 
     return total_distance
 
-print(day1())
+print(part1())
 
-def day2(filename='input.txt'):
+def part2(filename='input.txt'):
     left_list = []
     right_list = []
     similarity_score = 0
@@ -34,4 +34,4 @@ def day2(filename='input.txt'):
     
     return similarity_score
 
-print(day2())
+print(part2())
