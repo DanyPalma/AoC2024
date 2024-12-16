@@ -24,6 +24,6 @@ def part2(filename: str) -> int:
     dos = {x: 1 for x in [0] + [x.span()[-1] for x in re.finditer(r'do\(\)', code)]}
     insts.update(dos)
     
-    return sum([np.prod(np.array([int(x) for x in m.group().split(',')])) * insts[max([x for x in insts.keys() if x < m.span()[0]])] for m in re.finditer('(?<=mul\()\d{1,3},\d{1,3}(?=\))', code)])
+    return sum([np.prod(np.array([int(x) for x in m.group().split(',')])) * insts[max([x for x in insts.keys() if x < m.span()[0]])] for m in re.finditer(r'(?<=mul\()\d{1,3},\d{1,3}(?=\))', code)])
     
 print(part2('input.txt'))
